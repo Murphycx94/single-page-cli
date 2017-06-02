@@ -17,18 +17,18 @@
 </template>
 
 <script>
-export default {
-	data () {
-		return {
+	export default {
+		data () {
+			return {
 
-		}
-	},
-	methods: {
-		onSelect (name) {
-			this.$router.push({ name })
+			}
+		},
+		methods: {
+			onSelect (name) {
+				this.$router.push({ name })
+			}
 		}
 	}
-}
 </script>
 
 <style lang="less" scoped>

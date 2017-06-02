@@ -4,7 +4,7 @@
 		<h2>（模拟账号框-----------------------）</h2>
 		<h2>（模拟密码框-----------------------）</h2>
 		<div class="btn">
-			<el-button type="primary">登 录</el-button>
+			<el-button type="primary" @click="login">登 录</el-button>
 		</div>
 		<div class="jump">
 			<router-link :to="{ name: 'register' }">注册</router-link>
@@ -13,8 +13,18 @@
 </template>
 
 <script>
+	import { mapState, mapActions } from 'vuex'
 	export default {
+		data () {
+			return {
 
+			}
+		},
+		methods: {
+			...mapActions('user', {
+				login: 'USER_LOGIN'
+			})
+		}
 	}
 </script>
 
