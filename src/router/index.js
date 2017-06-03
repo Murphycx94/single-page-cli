@@ -2,7 +2,7 @@
 * @Author: cx
 * @Date:   2017-05-31 11:41:40
 * @Last Modified by:   cx
-* @Last Modified time: 2017-06-02 17:47:37
+* @Last Modified time: 2017-06-03 10:59:38
 */
 
 'use strict';
@@ -49,12 +49,13 @@ router.beforeEach(async (to, from, next) => {
 	let params;
 	const user = await getAuthorization()
 	if (!user) {
-		if (to.name != 'login') {
+		if (to.name == '404' || to.name != 'login') {
 			params = { name: 'login' }
 		}
-		console.log(user,'没有登录信息')
 	} else {
-
+		if(to.name == '404' || to.name == 'login') {
+			params = { name: 'index' }
+		}
 	}
 	if (!params) NProgress.done()
 	next(params)

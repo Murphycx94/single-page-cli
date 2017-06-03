@@ -1,8 +1,8 @@
 # single-page-cli
 
-> A Vue.js project
+基于vue2.js的单页面脚手架
 
-## Build Setup
+## Build Setup 运行环境
 
 ``` bash
 # install dependencies

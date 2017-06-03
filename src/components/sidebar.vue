@@ -1,7 +1,7 @@
 <template>
 	<div id="sidebar">
 		<el-menu
-		 default-active="menu1"
+		 :default-active="active"
 		 @select="onSelect"
 		 theme="dark">
 		 <el-menu-item index="index">首页</el-menu-item>
@@ -23,9 +23,18 @@
 
 			}
 		},
+		mounted () {
+
+		},
 		methods: {
 			onSelect (name) {
 				this.$router.push({ name })
+			}
+		},
+		computed: {
+			active () {
+				let active = this.$route.name
+				return active
 			}
 		}
 	}

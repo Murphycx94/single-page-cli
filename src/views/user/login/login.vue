@@ -22,8 +22,15 @@
 		},
 		methods: {
 			...mapActions('user', {
-				login: 'USER_LOGIN'
-			})
+				userLogin: 'USER_LOGIN'
+			}),
+			login () {
+				this.userLogin().then(res => {
+					this.$router.push({ name: 'index' })
+				}).catch(err => {
+
+				})
+			}
 		}
 	}
 </script>
