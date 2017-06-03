@@ -1,6 +1,6 @@
 # single-page-cli
 
-基于vue2.js的单页应用脚手架
+基于vue2.js的单页应用脚手架(es6)
 
 ## Build Setup 运行环境
 
