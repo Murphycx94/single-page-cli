@@ -1,5 +1,5 @@
 <template>
-	<div id="app">		
+	<div id="app">
 		<transition v-if="user" name="el-fade-in-linear" mode="out-in">
 			<div>
 				<Topbar></Topbar>
@@ -33,10 +33,10 @@
 			...mapState('user', ['user']),
 		},
 		methods: {
-			
+
 		},
 		mounted () {
-			
+
 		}
 	}
 </script>
